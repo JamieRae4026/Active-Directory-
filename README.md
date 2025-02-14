@@ -112,21 +112,12 @@ Next we change the time zone so as to allign with the other servers and client c
 
 Next we change the IP address setting to static IPs.
 You can do this through the control panel and set the DBS server to 8.8.8.8 to be able to communicate with the internet.
-![image](https://github.com/user-attachments/assets/7f23c40c-69ae-4d5f-8a1d-c48fb08c6f1f)
 
+![image](https://github.com/user-attachments/assets/6ea5acc7-9d5c-40ba-8835-13ff02987b12)
 
-
-
-
-
-
-
-
-
-
-4. **Install Windows Server on Domain Controller:**
-   - Install Windows Server (2019 or 2022) on the Domain Controller VM.
-   - Configure it as the primary Domain Controller for your AD setup.
+ **Install and Configure Active Directory:**
+   - Install the Active Directory Domain Services (AD DS) role.
+   - Promote the server to a Domain Controller (e.g., `lab.local`).
 
 
 
