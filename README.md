@@ -89,6 +89,36 @@ To replicate this setup in your own VirtualBox environment, follow these steps:
  Repeat the process to create a 2nd server which we will use as member server.
 
 
+**Configuring the DC-1**
+when the Server powers up a server manager window will open.
+Navigate to the Local Server where you will see some information.
+
+![image](https://github.com/user-attachments/assets/6d104699-f7ec-4ef7-86f1-ee0e51cfaff8)
+
+
+We will start by renaming this to DC-1
+
+![image](https://github.com/user-attachments/assets/2acec078-c42e-4e7a-a397-a84818ac87a8)
+
+Next we enabled Remote Desktop Connection so that we can access the Server through RDP.
+
+![image](https://github.com/user-attachments/assets/511e8fc0-811e-4dc2-80cb-d83db9e67c85)
+
+We can later come and specify which users can connect to the server through RDP.
+
+Next we change the time zone so as to allign with the other servers and client computers.
+
+![image](https://github.com/user-attachments/assets/f3202d96-0c71-4fa8-bc56-554296d32c3b)
+
+Next we change the IP address setting to static IPs.
+You can do this through the control panel and set the DBS server to 8.8.8.8 to be able to communicate with the internet.
+![image](https://github.com/user-attachments/assets/7f23c40c-69ae-4d5f-8a1d-c48fb08c6f1f)
+
+
+
+
+
+
 
 
 
