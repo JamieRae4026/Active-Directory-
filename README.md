@@ -86,6 +86,8 @@ To replicate this setup in your own VirtualBox environment, follow these steps:
  And we are in!! Successfully installed!
  ![image](https://github.com/user-attachments/assets/b9f87498-a8b3-4e48-b883-184f4f70fddf)
 
+ Repeat the process to create a 2nd server which we will use as member server.
+
 
 
 
