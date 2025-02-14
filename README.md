@@ -31,36 +31,52 @@ To replicate this setup in your own VirtualBox environment, follow these steps:
     In this scenario I will only showcase creating a VM for the Domain Controller and Member Server as I already have a Widnows VM which I will use as the client Machine.
 
    **First step is create a new VM**
+   
    ![image](https://github.com/user-attachments/assets/4d12070a-fe96-4a5e-ba5b-9cde7b2f88dc)
+   
    Here you provide your name, where you want to store your VM, the type(Microsoft Windows) and version(Windows 2016 64bit)
 
    **Assign Hardware Configuration**
+   
    ![image](https://github.com/user-attachments/assets/98e3e7b2-6a27-4d2e-94c9-026eb92f0644)
+   
    I chose 3GB as my base memory because I only have  8GB in my host machine and I don't want to overwhelm it.
+
+   
    **Allocate the size you want it to take**
+   
    ![image](https://github.com/user-attachments/assets/c235b16c-1bac-461b-b96e-6a474c1a46c6)
+
    Here I gave mine 30GB, you can assign yours according to the size of disk you have.
    Click Finish to proceed.
+
 
    **Adding the ISO image**
    Before starting the VM you need to add the ISO image that you downloaded. Go to the settings tab and select the storage section.
    Add the ISO image in the Storage Devices.
-![image](https://github.com/user-attachments/assets/01e6eba2-4f0e-477a-b7bc-7e81ec8ba229)
+   
+   ![image](https://github.com/user-attachments/assets/01e6eba2-4f0e-477a-b7bc-7e81ec8ba229)
 
-You can change the network settings to suit your environment but mine remained NAT so that it can communicate with the other VMs.
-You can now click Start to start the VM.
-![image](https://github.com/user-attachments/assets/e65a30d6-d310-41fb-9d2e-9fce7eba6c6d)
-
-**Installing the WindowsServer**
-This is abit similar to how you will install your Windows 10 with a few tweaks.
-Click Next in the 1st window that you are shown.
-Select te 4th option for Datacentre but with the desktop environment or you will be stuck with the terminal and if you are a beginner it will be very difficult to navigate.
-![image](https://github.com/user-attachments/assets/5a6d7391-bd50-4793-9ecc-8ea5e29f6208)
-Accept the License Agreement to proceed.
-Select the Custom Install to do a fresh install.
-Select the storage and click Next, the install will begin.
+   You can change the network settings to suit your environment but mine remained NAT so that it can communicate with the other VMs.
+   You can now click Start to start the VM.
+   
+   ![image](https://github.com/user-attachments/assets/e65a30d6-d310-41fb-9d2e-9fce7eba6c6d)
 
 
+   **Installing the WindowsServer**
+   This is abit similar to how you will install your Windows 10 with a few tweaks.
+   Click Next in the 1st window that you are shown.
+   Select te 4th option for Datacentre but with the desktop environment or you will be stuck with the terminal and if you are a beginner it will be very difficult to navigate.
+   
+   ![image](https://github.com/user-attachments/assets/5a6d7391-bd50-4793-9ecc-8ea5e29f6208)
+   
+   Accept the License Agreement to proceed.
+   Select the Custom Install to do a fresh install.
+   Select the storage and click Next, the install will begin.
+
+  ![image](https://github.com/user-attachments/assets/93325e5d-eeea-4003-9d97-c87db87780f4)
+
+  
 
 
 
