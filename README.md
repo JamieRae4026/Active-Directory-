@@ -76,7 +76,16 @@ To replicate this setup in your own VirtualBox environment, follow these steps:
 
   ![image](https://github.com/user-attachments/assets/93325e5d-eeea-4003-9d97-c87db87780f4)
 
-  
+  After it is done installing we will br prompted to create a passsword for the administrator account to proceed.
+  ![image](https://github.com/user-attachments/assets/e714e065-2b7d-465f-a4d4-06097e54ae42)
+
+  Proceed to Log in
+
+  ![image](https://github.com/user-attachments/assets/485cd36f-6d94-4b78-acd0-78043df5911f)
+
+ And we are in!! Successfully installed!
+ ![image](https://github.com/user-attachments/assets/b9f87498-a8b3-4e48-b883-184f4f70fddf)
+
 
 
 
