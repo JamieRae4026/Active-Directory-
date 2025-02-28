@@ -145,9 +145,80 @@ You can do this through the control panel and set the DBS server to 8.8.8.8 to b
 
     
    - Promote the server to a Domain Controller (e.g., `lab.local`).
-     When the installation is complete, 
+     Once the AD DS installation completes, you will see an option to Promote this server to a      domain controller. Click on this option to begin the promotion process.
+
+     ![image](https://github.com/user-attachments/assets/23b6f23d-decb-4325-8c80-44b3933ac01e)
+
+     This action will take you to the Deployment Configuration page. In this tab, you will be       asked to specify the configuration for the domain controller.
+     1. **Select "Add a new forest"**
+        Since this is a new environment and there is no existing Active Directory domain, we need to create a new forest. The forest is the highest-level container in Active Directory, and it holds one or more           domains. By choosing the Add a new forest option, we are essentially setting up a brand-new Active Directory environment from scratch.
+
+     **Why are we choosing this option?**
+     We are selecting Add a new forest because there is no existing domain or Active Directory infrastructure. If you were adding a domain controller to an existing forest, you would choose the Add a domain           controller to an existing domain option instead. Since we’re starting a fresh environment, creating a new forest allows us to establish the root domain of the forest, which will later be used for our             network's domain structure.
+
+     **Configure Domain Name**
+     After selecting Add a new forest, you will be prompted to provide a Root Domain Name. In this example, we will use lab.local, but you should choose a domain name that aligns with your organization’s naming       conventions.
+
+     ![image](https://github.com/user-attachments/assets/0c20c09d-3916-4d6f-a064-e025c363f145)
+
+     **Domain Controller Options**
+      In this tab, you will configure the core settings of your domain controller.
+     **Domain Controller Capabilities**:
+     **Global Catalog**
+     A Global Catalog server stores a partial replica of all objects in the forest, which helps with quick searches and logon operations across the domain. It's typically enabled for the first domain controller       in the forest.
+
+     **Domain Name System Server**
+     If you selected DNS server as an option, the domain controller will also act as a DNS server, which is necessary for Active Directory to function properly (as DNS is required for domain controllers to            locate each other and the resources in the domain).
+
+      **Read-Only Domain Controller (RODC):**
+      This option allows you to promote a Read-Only Domain Controller, which is typically used for remote or branch offices that need domain services but don't require the full Active Directory write access.
+     
+      **Directory Services Restore Mode (DSRM) password:**
+      DSRM is a special mode used to restore Active Directory. The DSRM password is required to boot into this mode. You will need to enter a secure password to ensure the safety of the system in case of a             directory recovery.
+
+     ![image](https://github.com/user-attachments/assets/4a85606b-5b49-4738-93b5-c56d4a37e35b)
+
+     **DNS Options Tab:**
+     This tab is relevant if you're also configuring the server to act as a DNS server (which is recommended).
+     **DNS Delegation:**
+     If this is the first domain controller in your environment, the server will automatically create a DNS delegation. This is used for forward lookup zones to resolve domain names within the network.
+     Important Note: If you are setting up DNS on this server, ensure that the DNS server checkbox is selected in the Domain Controller Options tab.
+
+     ![image](https://github.com/user-attachments/assets/91e3b156-75e6-4124-b0de-378783408bd9)
 
 
+ ** Additional Options Tab:**
+  This tab is where you configure additional settings related to replication and domain controller options.
+  **Site Name**
+  Active Directory uses Sites to define physical locations or network segments where domain controllers are located. Typically, the default Default-First-Site-Name will be selected unless you have created custom   sites for your network.
+
+  ![image](https://github.com/user-attachments/assets/c9554ee7-b9cd-4d69-be61-a0129d5eb142)
+
+**Paths Tab:**
+This tab lets you specify where the Active Directory database and log files will be stored.
+
+Database, Log Files, SYSVOL:
+
+Database: The NTDS.dit file, where the Active Directory database is stored.
+Log Files: Files used to track changes to Active Directory data, ensuring that the database can be replicated correctly.
+SYSVOL: A shared folder that stores server logon scripts, Group Policy objects, and other data that must be replicated to other domain controllers.
+Important Note: By default, these are stored in C:\Windows\NTDS for the database, C:\Windows\NTDS\Logs for logs, and C:\Windows\SYSVOL for SYSVOL. You can choose custom paths, especially if you are setting up a large Active Directory environment and want to optimize disk performance.
+
+![image](https://github.com/user-attachments/assets/a1f0dbe1-7914-4124-b8f5-9a79dbc9b94b)
 
 
- 
+** Review Tab:**
+In this tab, you will see a summary of all the configuration settings you’ve chosen so far. It is important to review these settings before proceeding to ensure everything is set up correctly.
+
+![image](https://github.com/user-attachments/assets/1ae709b1-1468-4aef-a2d7-6781bfdcf929)
+
+
+Verify Settings:
+Double-check your selected options, such as the domain name (lab.local), DNS settings, the DSRM password, and paths for the database and logs.
+7. Install Tab:
+Once all options have been reviewed and confirmed, you can click the Install button. The server will then begin the process of promoting itself to a domain controller.
+
+![image](https://github.com/user-attachments/assets/347366f1-cc0f-4cbd-a975-41c14d7c7803)
+
+Progress and Completion:
+The promotion process may take several minutes, depending on your server's performance and configuration. Once complete, the server will restart, and you will have a fully functioning domain controller for your lab.local domain.
