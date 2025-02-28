@@ -117,7 +117,35 @@ You can do this through the control panel and set the DBS server to 8.8.8.8 to b
 
  **Install and Configure Active Directory:**
    - Install the Active Directory Domain Services (AD DS) role.
+     Begin by logging into the server you intend to configure. Open Server Manager, which will be your central hub for managing server settings.
+     In Server Manager, go to the Dashboard and select Add Roles and Features to initiate the installation of new server roles and features.
+     
+     ![image](https://github.com/user-attachments/assets/a29e096d-4445-4bfd-9dc3-7791f6f1fab9)
+
+     The Installation Type screen will appear. Choose Role-based or feature-based installation and click Next to proceed.
+
+     ![image](https://github.com/user-attachments/assets/20e11b96-4a26-4a48-ad52-fdfc44f9763e)
+
+     On the Server Selection page, you will be asked to choose a server from your local pool. In this scenario, we only have one server available for selection, which is the server you are currently working on—       DC-01.
+
+
+     ![image](https://github.com/user-attachments/assets/2f767996-9325-406f-93ac-1ba3abb458a1)
+
+     On the Server Roles tab, find and select Active Directory Domain Services. This option will allow the server to function as the domain controller. Once selected, a prompt will appear, asking to add         
+     additional features that are required for the role. Click on Add Features, then click Next.
+
+     ![image](https://github.com/user-attachments/assets/535072f5-b735-4a46-b6ca-71886478e59c)
+
+     Continue clicking Next through the subsequent windows, reviewing the role and feature selections, until you reach the Install button. Once you’re ready, click Install to begin the installation process.
+     Allow the installation process to complete. This may take some time, depending on your server’s performance and network speed. Once the installation is finished, your server will be ready for further   
+     configuration, including promoting it to a domain controller.
+
+
+     ![image](https://github.com/user-attachments/assets/c4e5aa8b-da46-49b5-a3f8-07231fce2b07)
+
+    
    - Promote the server to a Domain Controller (e.g., `lab.local`).
+     When the installation is complete, 
 
 
 
